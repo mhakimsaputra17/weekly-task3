@@ -1,0 +1,99 @@
+:root {
+  --white: #fff;
+  --Neutral-Gray-900: #0f172a;
+  --Neutral-Gray-50: #f8fafc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Mulish", "Roboto", sans-serif;
+  line-height: 1.6;
+  background-color: var(--white);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 130px;
+  border-bottom: 1px solid #dedede;
+  /* box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  flex: 1;
+  width: 130px;
+  height: 51px;
+}
+
+.navbar-brand a {
+  text-decoration: none;
+}
+
+/* nav tengah */
+.navbar-menu {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: var(--Neutral-Gray-900);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  position: relative;
+}
+
+/* Tombol Auth kanan */
+.navbar-auth {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.btn {
+  padding: 12px 18px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.btn-outline {
+  border-radius: 5px;
+  border: 1px solid #1d4ed8;
+  background: transparent;
+  color: #1d4ed8;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.75px;
+}
+
+.btn-primary {
+  background-color: #1d4ed8;
+  border-radius: 5px;
+  color: var(--Neutral-Gray-50);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.75px;
+  border: 1px solid #1d4ed8;
+}
