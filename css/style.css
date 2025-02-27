@@ -102,8 +102,9 @@ body {
 
 .hero-section {
   display: flex;
-  padding: 80px 130px;
-  gap: 60px;
+  padding: 48px 130px;
+  gap: 20px;
+  /* padding-left: 20px; */
   align-items: center;
 }
 
@@ -112,11 +113,13 @@ body {
 }
 
 .hero-content h1 {
-  font-size: 48px;
+  font-size: 40px;
   color: #121212;
   margin-bottom: 24px;
+
   font-weight: 500;
   line-height: 70px;
+  /* width: 638px; */
 }
 
 .content-moto {
@@ -131,19 +134,33 @@ body {
   margin-bottom: 10px;
 }
 
-.hero-image {
+.hero-images {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* flex-wrap: wrap; */
 }
 
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 24px;
+.image-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
 }
 
-.image-card {
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.image-row {
+  flex: 25%;
+  gap: 1px;
+  max-width: 100%;
+  padding: 0 13px;
+}
+
+.image-row img {
+  border-radius: 8px;
+  display: block;
   transition: transform 0.3s ease;
+  margin-top: 16px;
+  vertical-align: middle;
+  width: 100%;
 }
