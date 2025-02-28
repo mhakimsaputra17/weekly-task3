@@ -229,3 +229,169 @@ section:nth-of-type(2) {
   justify-content: center;
   align-items: center;
 }
+
+/* movies section */
+
+.movies-header {
+  text-align: center;
+}
+
+.movies-header p {
+  color: #1d4ed8;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: Mulish;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 34px; /* 188.889% */
+  letter-spacing: 0.75px;
+}
+
+.movies-header h2 {
+  color: #121212;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: Mulish;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 45px; /* 140.625% */
+  letter-spacing: 1px;
+  margin-bottom: 28px;
+}
+
+.movie-grid {
+  padding: 18px 130px;
+  display: flex;
+
+  gap: 20px;
+  justify-content: center;
+}
+
+.poster img {
+  width: 257px;
+  height: 375px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.poster {
+  position: relative;
+  overflow: hidden;
+}
+
+.movie-card h3 {
+  margin-top: 19px;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: Mulish;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 34px; /* 141.667% */
+  letter-spacing: 1px;
+}
+
+.tags {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.tag {
+  background-color: rgba(160, 163, 189, 0.1);
+  background-size: 90px 20px;
+  border-radius: 20px;
+  font-size: 12px;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  /* Text Small Regular */
+  font-family: Mulish;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px; /* 200% */
+  letter-spacing: 0.75px;
+  padding: 1px 17px;
+  color: #a0a3bd;
+}
+
+.button {
+  padding: 12px 18px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+  cursor: pointer;
+  width: 185px;
+  text-align: center;
+}
+
+.button-outline {
+  border-radius: 5px;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.75px;
+}
+
+.button-primary {
+  background-color: #1d4ed8;
+  border-radius: 5px;
+  color: var(--Neutral-Gray-50);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.75px;
+  border: 1px solid #1d4ed8;
+}
+
+.actions {
+  position: absolute;
+  bottom: 150px;
+  left: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+section:nth-of-type(4) .movies-header p {
+  text-align: start;
+  padding-left: 96px;
+  margin-top: 110px;
+}
+
+section:nth-of-type(4) .movies-header h2 {
+  text-align: start;
+  padding-left: 96px;
+}
+
+.movie-card h4 {
+  color: #1d4ed8;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: Mulish;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px; /* 177.778% */
+  letter-spacing: 0.75px;
+}
+
+section:nth-of-type(5) .subscribe {
+  border-radius: 8px;
+  display: flex;
+}
+
+section:nth-of-type(5) {
+  width: 1090px;
+  height: 318px;
+  background-color: #2563eb;
+  border-radius: 8px;
+  margin-left: 90px;
+  border-radius: 20px;
+}
+
+section:nth-of-type(5) form {
+  /* background-color: #1d4ed8; */
+}
