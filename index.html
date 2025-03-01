@@ -3,11 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>Tickitz - Book Movie Tickets Online</title>
     <link
-      href="
-https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css
-"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css"
       rel="stylesheet"
     />
     <!-- google font  -->
@@ -25,18 +23,14 @@ https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css
         <!-- Logo Tickitz -->
         <div class="navbar-brand">
           <a href="/index.html">
-            <img
-              src="/assets/tickets.svg"
-              alt="logo-tickitz"
-              style="width: 130px; height: 51px"
-            />
+            <img src="/assets/tickets.svg" alt="logo-tickitz" />
           </a>
         </div>
 
         <!-- Nav menu in the middle -->
         <div class="navbar-menu">
           <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="./index.html">Home</a></li>
             <li><a href="#">Movie</a></li>
             <li><a href="#">Buy Ticket</a></li>
           </ul>
@@ -47,8 +41,37 @@ https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css
           <a href="#" class="btn btn-outline">Sign in</a>
           <a href="#" class="btn btn-primary">Sign Up</a>
         </div>
+
+        <!-- Hamburger Menu for Mobile -->
+        <div class="hamburger-menu" id="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </nav>
+
+      <!-- Mobile Menu Overlay -->
+      <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+          <div class="navbar-brand">
+            <a href="/index.html">
+              <img src="/assets/tickets.svg" alt="logo-tickitz" />
+            </a>
+          </div>
+          <button class="close-menu" id="close-menu">×</button>
+        </div>
+        <div class="mobile-menu-items">
+          <a href="#">Home</a>
+          <a href="#">Movie</a>
+          <a href="#">Buy Ticket</a>
+        </div>
+        <div class="mobile-auth">
+          <a href="#" class="btn btn-outline">Sign in</a>
+          <a href="#" class="btn btn-primary">Sign Up</a>
+        </div>
+      </div>
     </header>
+
     <main>
       <section class="hero-section">
         <div class="hero-content">
@@ -62,15 +85,16 @@ https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css
           <div class="image-flex-container">
             <div class="image-row">
               <img src="./assets/johnwick.svg" alt="johnwick movie" />
-              <img src="./assets/spiderman.svg" alt="lionking movie" />
+              <img src="./assets/spiderman.svg" alt="spiderman movie" />
             </div>
             <div class="image-row">
-              <img src="./assets/lionking.svg" alt="spiderman movie" />
+              <img src="./assets/lionking.svg" alt="lionking movie" />
               <img src="./assets/roblox.svg" alt="roblox movie" />
             </div>
           </div>
         </div>
       </section>
+
       <section>
         <div class="header-features">
           <p>WHY CHOOSE US</p>
@@ -99,7 +123,7 @@ https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css
           </div>
           <div class="feature">
             <div class="icon-chat">
-              <img src="/assets/chat.svg" alt="shieldone" />
+              <img src="/assets/chat.svg" alt="chat icon" />
             </div>
             <h3>24/7 Customer Support</h3>
             <p>
@@ -108,16 +132,24 @@ https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css
           </div>
         </div>
       </section>
+
       <!-- movies section -->
-      <section>
+      <section class="movie-section-container">
         <div class="movies-header">
           <p>MOVIES</p>
-          <h2>Exciting Movies That Should Be<br />Watched Today</h2>
+          <h2>
+            Exciting Movies That Should Be<br class="hide-mobile" />Watched
+            Today
+          </h2>
         </div>
+        <p class="scroll-instruction">← Geser untuk melihat film lainnya →</p>
         <div class="movie-grid">
           <div class="movie-card">
             <div class="poster">
-              <img src="./assets/image/black-widow.png" alt="blackwidow" />
+              <img
+                src="./assets/image/black-widow.png"
+                alt="Black Widow movie poster"
+              />
               <div class="actions">
                 <button class="button button-outline">Details</button>
                 <button class="button button-primary">Buy Ticket</button>
@@ -131,7 +163,16 @@ https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css
           </div>
           <div class="movie-card">
             <div class="poster">
-              <img src="./assets/image/the-witches.png" alt="blackwidow" />
+              <div class="badge-recommendation">Recommendation</div>
+              <img
+                src="./assets/image/the-witches.png"
+                alt="The Witches movie poster"
+              />
+
+              <div class="actions">
+                <button class="button button-outline">Details</button>
+                <button class="button button-primary">Buy Ticket</button>
+              </div>
             </div>
             <h3>The Witches</h3>
             <div class="tags">
@@ -141,7 +182,12 @@ https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css
           </div>
           <div class="movie-card">
             <div class="poster">
-              <img src="./assets/image/tenet.png" alt="blackwidow" />
+              <div class="badge-recommendation">Recommendation</div>
+              <img src="./assets/image/tenet.png" alt="Tenet movie poster" />
+              <div class="actions">
+                <button class="button button-outline">Details</button>
+                <button class="button button-primary">Buy Ticket</button>
+              </div>
             </div>
             <h3>Tenet</h3>
             <div class="tags">
@@ -151,7 +197,14 @@ https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css
           </div>
           <div class="movie-card">
             <div class="poster">
-              <img src="./assets/image/spiderman.png" alt="blackwidow" />
+              <img
+                src="./assets/image/spiderman.png"
+                alt="Spiderman movie poster"
+              />
+              <div class="actions">
+                <button class="button button-outline">Details</button>
+                <button class="button button-primary">Buy Ticket</button>
+              </div>
             </div>
             <h3>Spiderman</h3>
             <div class="tags">
@@ -159,19 +212,130 @@ https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css
               <span class="tag">Adventure</span>
             </div>
           </div>
+          <!-- Tambahan film untuk mobile scrolling
+          <div class="movie-card">
+            <div class="poster">
+              <img src="./assets/image/black-widow.png" alt="Movie poster" />
+              <div class="actions">
+                <button class="button button-outline">Details</button>
+                <button class="button button-primary">Buy Ticket</button>
+              </div>
+            </div>
+            <h3>Mulan</h3>
+            <div class="tags">
+              <span class="tag">Action</span>
+              <span class="tag">Drama</span>
+            </div>
+          </div>
+          <div class="movie-card">
+            <div class="poster">
+              <img src="./assets/image/the-witches.png" alt="Movie poster" />
+              <div class="actions">
+                <button class="button button-outline">Details</button>
+                <button class="button button-primary">Buy Ticket</button>
+              </div>
+            </div>
+            <h3>Dune</h3>
+            <div class="tags">
+              <span class="tag">Sci-Fi</span>
+              <span class="tag">Adventure</span>
+            </div>
+          </div> -->
+        </div>
+        <div class="scroll-indicator scroll-left" id="scroll-left">
+          &#10094;
+        </div>
+        <div class="scroll-indicator scroll-right" id="scroll-right">
+          &#10095;
         </div>
       </section>
 
       <!-- movie upcoming section -->
-      <section>
+      <section class="movie-section-container upcoming-movies">
         <div class="movies-header">
           <p>UPCOMING MOVIES</p>
           <h2>Exciting Movie Coming Soon</h2>
+          <div class="movie-nav-buttons">
+            <button class="nav-button nav-button-prev" id="prev-upcoming">
+              <svg
+                class="circle"
+                xmlns="http://www.w3.org/2000/svg"
+                width="69"
+                height="69"
+                viewBox="0 0 69 69"
+                fill="none"
+              >
+                <circle cx="34.5" cy="34.5" r="34.5" fill="#1D4ED8" />
+              </svg>
+              <svg
+                class="arrow"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M21 12L3 12"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M15 6L21 12L15 18"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <button class="nav-button nav-button-next" id="next-upcoming">
+              <svg
+                class="circle"
+                xmlns="http://www.w3.org/2000/svg"
+                width="69"
+                height="69"
+                viewBox="0 0 69 69"
+                fill="none"
+              >
+                <circle cx="34.5" cy="34.5" r="34.5" fill="#1D4ED8" />
+              </svg>
+              <svg
+                class="arrow"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M21 12L3 12"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M15 6L21 12L15 18"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
+        <p class="scroll-instruction">← Geser untuk melihat film lainnya →</p>
         <div class="movie-grid">
           <div class="movie-card">
             <div class="poster">
-              <img src="./assets/image/black-widow.png" alt="blackwidow" />
+              <img
+                src="./assets/image/black-widow.png"
+                alt="Black Widow movie poster"
+              />
               <div class="actions">
                 <button class="button button-outline">Details</button>
                 <button class="button button-primary">Buy Ticket</button>
@@ -186,7 +350,14 @@ https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css
           </div>
           <div class="movie-card">
             <div class="poster">
-              <img src="./assets/image/the-witches.png" alt="blackwidow" />
+              <img
+                src="./assets/image/the-witches.png"
+                alt="The Witches movie poster"
+              />
+              <div class="actions">
+                <button class="button button-outline">Details</button>
+                <button class="button button-primary">Buy Ticket</button>
+              </div>
             </div>
             <h3>The Witches</h3>
             <h4>January 2024</h4>
@@ -197,7 +368,11 @@ https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css
           </div>
           <div class="movie-card">
             <div class="poster">
-              <img src="./assets/image/tenet.png" alt="blackwidow" />
+              <img src="./assets/image/tenet.png" alt="Tenet movie poster" />
+              <div class="actions">
+                <button class="button button-outline">Details</button>
+                <button class="button button-primary">Buy Ticket</button>
+              </div>
             </div>
             <h3>Tenet</h3>
             <h4>June 2024</h4>
@@ -208,7 +383,14 @@ https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css
           </div>
           <div class="movie-card">
             <div class="poster">
-              <img src="./assets/image/spiderman.png" alt="blackwidow" />
+              <img
+                src="./assets/image/spiderman.png"
+                alt="Spiderman movie poster"
+              />
+              <div class="actions">
+                <button class="button button-outline">Details</button>
+                <button class="button button-primary">Buy Ticket</button>
+              </div>
             </div>
             <h3>Spiderman</h3>
             <h4>March 2024</h4>
@@ -217,11 +399,48 @@ https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css
               <span class="tag">Adventure</span>
             </div>
           </div>
+          <!-- Tambahan film untuk mobile scrolling
+          <div class="movie-card">
+            <div class="poster">
+              <img src="./assets/image/black-widow.png" alt="Movie poster" />
+              <div class="actions">
+                <button class="button button-outline">Details</button>
+                <button class="button button-primary">Buy Ticket</button>
+              </div>
+            </div>
+            <h3>Avatar 2</h3>
+            <h4>July 2024</h4>
+            <div class="tags">
+              <span class="tag">Fantasy</span>
+              <span class="tag">Sci-Fi</span>
+            </div>
+          </div> -->
+          <!-- <div class="movie-card">
+            <div class="poster">
+              <img src="./assets/image/the-witches.png" alt="Movie poster" />
+              <div class="actions">
+                <button class="button button-outline">Details</button>
+                <button class="button button-primary">Buy Ticket</button>
+              </div>
+            </div>
+            <h3>Fast & Furious X</h3>
+            <h4>August 2024</h4>
+            <div class="tags">
+              <span class="tag">Action</span>
+              <span class="tag">Thriller</span>
+            </div>
+          </div> -->
+        </div>
+        <div class="scroll-indicator scroll-left" id="scroll-left-upcoming">
+          &#10094;
+        </div>
+        <div class="scroll-indicator scroll-right" id="scroll-right-upcoming">
+          &#10095;
         </div>
       </section>
 
       <!-- newsletter section -->
-      <section>
+      <section class="newsletter-section">
         <div class="newsletter-container">
           <div class="newsletter-content">
             <h1>Subscribe to our newsletter</h1>
@@ -236,9 +455,8 @@ https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css
                 placeholder="Email Address"
                 aria-label="Email Address"
               />
-              <button>Subscribe Now</button>
+              <button type="submit">Subscribe Now</button>
             </form>
-            <div class="decoration" aria-hidden="true"></div>
           </div>
         </div>
       </section>
@@ -269,13 +487,13 @@ https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css
           <section class="footer-section">
             <h3>Our Sponsor</h3>
             <div class="sponsors">
-              <div class="sponsor-logo ebu-id">
+              <div class="sponsor-logo">
                 <img src="/assets/edu.svg" alt="ebu-id" />
               </div>
-              <div class="sponsor-logo cineone">
+              <div class="sponsor-logo">
                 <img src="./assets/cineone.svg" alt="cineone" />
               </div>
-              <div class="sponsor-logo hiflix">
+              <div class="sponsor-logo">
                 <img src="./assets/hiflix.svg" alt="hiflix" />
               </div>
             </div>
@@ -284,24 +502,20 @@ https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css
           <section class="footer-section">
             <h3>Follow us</h3>
             <div class="social-links">
-              <a href="./assets/facebook.svg" class="social-link">
+              <a href="#" class="social-link">
                 <img src="./assets/facebook.svg" alt="facebook" />
-
                 Tickitz Cinema id
               </a>
-              <a href="./assets/instagram.svg" class="social-link">
+              <a href="#" class="social-link">
                 <img src="./assets/instagram.svg" alt="instagram" />
-
                 tickitz.id
               </a>
-              <a href="./assets/twitter.svg" class="social-link">
+              <a href="#" class="social-link">
                 <img src="./assets/twitter.svg" alt="twitter" />
-
                 tickitz.id
               </a>
-              <a href="./assets/youtube.svg" class="social-link">
+              <a href="#" class="social-link">
                 <img src="./assets/youtube.svg" alt="youtube" />
-
                 Tickitz Cinema id
               </a>
             </div>
