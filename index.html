@@ -220,16 +220,95 @@ https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css
         </div>
       </section>
 
+      <!-- newsletter section -->
       <section>
-        <div class="subscribe">
-          <h1>Subscribe to our newsletter</h1>
-          <form>
-            <input type="text" name="First Name" />
-            <input type="text" name="Email Address" />
-            <button>Subscribe Now</button>
-          </form>
+        <div class="newsletter-container">
+          <div class="newsletter-content">
+            <h1>Subscribe to our newsletter</h1>
+            <form class="form-group">
+              <input
+                type="text"
+                placeholder="First Name"
+                aria-label="First Name"
+              />
+              <input
+                type="email"
+                placeholder="Email Address"
+                aria-label="Email Address"
+              />
+              <button>Subscribe Now</button>
+            </form>
+            <div class="decoration" aria-hidden="true"></div>
+          </div>
         </div>
       </section>
+
+      <!--  footer -->
+      <footer>
+        <div class="footer-container">
+          <section class="footer-section">
+            <div class="logo">
+              <img src="./assets/tickets.svg" alt="tickitz footer" />
+            </div>
+            <p class="tagline">
+              Stop waiting in line. Buy tickets conveniently, watch movies
+              quietly.
+            </p>
+          </section>
+
+          <section class="footer-section">
+            <h3>Explore</h3>
+            <nav class="nav-links">
+              <a href="#">Cinemas</a>
+              <a href="#">Movies List</a>
+              <a href="#">My Ticket</a>
+              <a href="#">Notification</a>
+            </nav>
+          </section>
+
+          <section class="footer-section">
+            <h3>Our Sponsor</h3>
+            <div class="sponsors">
+              <div class="sponsor-logo ebu-id">
+                <img src="/assets/edu.svg" alt="ebu-id" />
+              </div>
+              <div class="sponsor-logo cineone">
+                <img src="./assets/cineone.svg" alt="cineone" />
+              </div>
+              <div class="sponsor-logo hiflix">
+                <img src="./assets/hiflix.svg" alt="hiflix" />
+              </div>
+            </div>
+          </section>
+
+          <section class="footer-section">
+            <h3>Follow us</h3>
+            <div class="social-links">
+              <a href="./assets/facebook.svg" class="social-link">
+                <img src="./assets/facebook.svg" alt="facebook" />
+
+                Tickitz Cinema id
+              </a>
+              <a href="./assets/instagram.svg" class="social-link">
+                <img src="./assets/instagram.svg" alt="instagram" />
+
+                tickitz.id
+              </a>
+              <a href="./assets/twitter.svg" class="social-link">
+                <img src="./assets/twitter.svg" alt="twitter" />
+
+                tickitz.id
+              </a>
+              <a href="./assets/youtube.svg" class="social-link">
+                <img src="./assets/youtube.svg" alt="youtube" />
+
+                Tickitz Cinema id
+              </a>
+            </div>
+          </section>
+        </div>
+        <div class="copyright">© 2020 Tickitz. All Rights Reserved.</div>
+      </footer>
     </main>
   </body>
 </html>
