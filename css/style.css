@@ -899,6 +899,9 @@ footer {
   .navbar {
     padding: 15px 20px;
   }
+  .navbar-brand img {
+    content: url("../assets/Tickitz2.svg");
+  }
 
   .navbar-menu,
   .navbar-auth {
@@ -907,6 +910,7 @@ footer {
 
   .hamburger-menu {
     display: flex;
+    content: url("../assets/gg_menu-right-alt.svg");
   }
 
   .mobile-menu {
@@ -986,6 +990,10 @@ footer {
     text-align: center;
   }
 
+  .logo img {
+    content: url("../assets/Tickitz2.svg");
+  }
+
   .tagline {
     max-width: 100%;
   }
@@ -1025,5 +1033,9 @@ footer {
   .movie-card {
     min-width: 160px;
     width: 160px;
+  }
+
+  .logo img {
+    content: url("../assets/Tickitz2.svg");
   }
 }
