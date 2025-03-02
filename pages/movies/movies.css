@@ -149,7 +149,7 @@ header:nth-of-type(1) {
   height: 70vh;
   min-height: 500px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../assets/png/marvel2.png");
+    url("/assets/images/backgrounds/marvel2.png");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -866,10 +866,10 @@ footer {
     padding: 15px 20px;
   }
   .navbar-brand img {
-    content: url("../assets/Tickitz2.svg");
+    content: url("/assets//images/logo/Tickitz2.svg");
   }
   .logo img {
-    content: url("../assets/Tickitz2.svg");
+    content: url("/assets//images/logo/Tickitz2.svg");
   }
 
   .navbar-menu,
@@ -879,7 +879,7 @@ footer {
 
   .hamburger-menu {
     display: flex;
-    content: url("../assets/gg_menu-right-alt.svg");
+    content: url("/assets/images/icons/gg_menu-right-alt.svg");
   }
 
   .mobile-menu {
@@ -1000,6 +1000,6 @@ footer {
     width: 160px;
   }
   .logo img {
-    content: url("../assets/Tickitz2.svg");
+    content: url("/assets//images/logo/Tickitz2.svg");
   }
 }

@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/index.css" />
   </head>
   <body>
     <header>
@@ -25,7 +25,7 @@
           <a href="/index.html">
             <img
               class="logo-color"
-              src="/assets/tickets.svg"
+              src="/assets/images/logo/tickets.svg"
               alt="logo-tickitz"
             />
           </a>
@@ -35,15 +35,15 @@
         <div class="navbar-menu">
           <ul>
             <li><a href="./index.html">Home</a></li>
-            <li><a href="./movies.html">Movie</a></li>
-            <li><a href="./buyticket.html">Buy Ticket</a></li>
+            <li><a href="./pages/movies/movies.html">Movie</a></li>
+            <li><a href="./pages/order/order-page.html">Buy Ticket</a></li>
           </ul>
         </div>
 
         <!-- Auth Button in Right -->
         <div class="navbar-auth">
-          <a href="./signin.html" class="btn btn-outline">Sign in</a>
-          <a href="./signup.html" class="btn btn-primary">Sign Up</a>
+          <a href="./pages/auth/signin.html" class="btn btn-outline">Sign in</a>
+          <a href="./pages/auth/signup.html" class="btn btn-primary">Sign Up</a>
         </div>
 
         <!-- Hamburger Menu for Mobile -->
@@ -88,12 +88,21 @@
         <div class="hero-images">
           <div class="image-flex-container">
             <div class="image-row">
-              <img src="./assets/johnwick.svg" alt="johnwick movie" />
-              <img src="./assets/spiderman.svg" alt="spiderman movie" />
+              <img
+                src="./assets//images/poster/johnwick.svg"
+                alt="johnwick movie"
+              />
+              <img
+                src="./assets/images/poster/spiderman.svg"
+                alt="spiderman movie"
+              />
             </div>
             <div class="image-row">
-              <img src="./assets/lionking.svg" alt="lionking movie" />
-              <img src="./assets/roblox.svg" alt="roblox movie" />
+              <img
+                src="./assets/images/poster/lionking.svg"
+                alt="lionking movie"
+              />
+              <img src="./assets/images/poster/roblox.svg" alt="roblox movie" />
             </div>
           </div>
         </div>
@@ -107,7 +116,7 @@
         <div class="features">
           <div class="feature">
             <div class="icon">
-              <img src="/assets/shieldone.svg" alt="shieldone" />
+              <img src="./assets/images/icons/shieldone.svg" alt="shieldone" />
             </div>
             <h3>Guaranteed</h3>
             <p>
@@ -117,7 +126,7 @@
           </div>
           <div class="feature">
             <div class="icon">
-              <img src="/assets/check.svg" alt="check" />
+              <img src="./assets/images/icons/check.svg" alt="check" />
             </div>
             <h3>Affordable</h3>
             <p>
@@ -127,7 +136,7 @@
           </div>
           <div class="feature">
             <div class="icon-chat">
-              <img src="/assets/chat.svg" alt="chat icon" />
+              <img src="./assets/images/icons/chat.svg" alt="chat icon" />
             </div>
             <h3>24/7 Customer Support</h3>
             <p>
@@ -151,7 +160,7 @@
           <div class="movie-card">
             <div class="poster">
               <img
-                src="./assets/image/black-widow.png"
+                src="./assets/images/poster/black-widow.png"
                 alt="Black Widow movie poster"
               />
               <div class="actions">
@@ -169,7 +178,7 @@
             <div class="poster">
               <div class="badge-recommendation">Recommendation</div>
               <img
-                src="./assets/image/the-witches.png"
+                src="./assets/images/poster/the-witches.png"
                 alt="The Witches movie poster"
               />
 
@@ -187,7 +196,10 @@
           <div class="movie-card">
             <div class="poster">
               <div class="badge-recommendation">Recommendation</div>
-              <img src="./assets/image/tenet.png" alt="Tenet movie poster" />
+              <img
+                src="./assets/images/poster/tenet.png"
+                alt="Tenet movie poster"
+              />
               <div class="actions">
                 <button class="button button-outline">Details</button>
                 <button class="button button-primary">Buy Ticket</button>
@@ -202,7 +214,7 @@
           <div class="movie-card">
             <div class="poster">
               <img
-                src="./assets/image/spiderman.png"
+                src="./assets/images/poster/spiderman.png"
                 alt="Spiderman movie poster"
               />
               <div class="actions">
@@ -216,35 +228,6 @@
               <span class="tag">Adventure</span>
             </div>
           </div>
-          <!-- Tambahan film untuk mobile scrolling
-          <div class="movie-card">
-            <div class="poster">
-              <img src="./assets/image/black-widow.png" alt="Movie poster" />
-              <div class="actions">
-                <button class="button button-outline">Details</button>
-                <button class="button button-primary">Buy Ticket</button>
-              </div>
-            </div>
-            <h3>Mulan</h3>
-            <div class="tags">
-              <span class="tag">Action</span>
-              <span class="tag">Drama</span>
-            </div>
-          </div>
-          <div class="movie-card">
-            <div class="poster">
-              <img src="./assets/image/the-witches.png" alt="Movie poster" />
-              <div class="actions">
-                <button class="button button-outline">Details</button>
-                <button class="button button-primary">Buy Ticket</button>
-              </div>
-            </div>
-            <h3>Dune</h3>
-            <div class="tags">
-              <span class="tag">Sci-Fi</span>
-              <span class="tag">Adventure</span>
-            </div>
-          </div> -->
         </div>
         <div class="scroll-indicator scroll-left" id="scroll-left">
           &#10094;
@@ -337,7 +320,7 @@
           <div class="movie-card">
             <div class="poster">
               <img
-                src="./assets/image/black-widow.png"
+                src="./assets/images/poster/black-widow.png"
                 alt="Black Widow movie poster"
               />
               <div class="actions">
@@ -355,7 +338,7 @@
           <div class="movie-card">
             <div class="poster">
               <img
-                src="./assets/image/the-witches.png"
+                src="./assets/images/poster/the-witches.png"
                 alt="The Witches movie poster"
               />
               <div class="actions">
@@ -372,7 +355,10 @@
           </div>
           <div class="movie-card">
             <div class="poster">
-              <img src="./assets/image/tenet.png" alt="Tenet movie poster" />
+              <img
+                src="./assets/images/poster/tenet.png"
+                alt="Tenet movie poster"
+              />
               <div class="actions">
                 <button class="button button-outline">Details</button>
                 <button class="button button-primary">Buy Ticket</button>
@@ -388,7 +374,7 @@
           <div class="movie-card">
             <div class="poster">
               <img
-                src="./assets/image/spiderman.png"
+                src="./assets/images/poster/spiderman.png"
                 alt="Spiderman movie poster"
               />
               <div class="actions">
@@ -403,37 +389,6 @@
               <span class="tag">Adventure</span>
             </div>
           </div>
-          <!-- Tambahan film untuk mobile scrolling
-          <div class="movie-card">
-            <div class="poster">
-              <img src="./assets/image/black-widow.png" alt="Movie poster" />
-              <div class="actions">
-                <button class="button button-outline">Details</button>
-                <button class="button button-primary">Buy Ticket</button>
-              </div>
-            </div>
-            <h3>Avatar 2</h3>
-            <h4>July 2024</h4>
-            <div class="tags">
-              <span class="tag">Fantasy</span>
-              <span class="tag">Sci-Fi</span>
-            </div>
-          </div> -->
-          <!-- <div class="movie-card">
-            <div class="poster">
-              <img src="./assets/image/the-witches.png" alt="Movie poster" />
-              <div class="actions">
-                <button class="button button-outline">Details</button>
-                <button class="button button-primary">Buy Ticket</button>
-              </div>
-            </div>
-            <h3>Fast & Furious X</h3>
-            <h4>August 2024</h4>
-            <div class="tags">
-              <span class="tag">Action</span>
-              <span class="tag">Thriller</span>
-            </div>
-          </div> -->
         </div>
         <div class="scroll-indicator scroll-left" id="scroll-left-upcoming">
           &#10094;
@@ -470,7 +425,10 @@
         <div class="footer-container">
           <section class="footer-section">
             <div class="logo">
-              <img src="./assets/tickets.svg" alt="tickitz footer" />
+              <img
+                src="./assets/images/logo/tickets.svg"
+                alt="tickitz footer"
+              />
             </div>
             <p class="tagline">
               Stop waiting in line. Buy tickets conveniently, watch movies
@@ -492,13 +450,13 @@
             <h3>Our Sponsor</h3>
             <div class="sponsors">
               <div class="sponsor-logo">
-                <img src="/assets/edu.svg" alt="ebu-id" />
+                <img src="./assets/images/icons/edu.svg" alt="ebu-id" />
               </div>
               <div class="sponsor-logo">
-                <img src="./assets/cineone.svg" alt="cineone" />
+                <img src="./assets/images/icons/cineone.svg" alt="cineone" />
               </div>
               <div class="sponsor-logo">
-                <img src="./assets/hiflix.svg" alt="hiflix" />
+                <img src="./assets/images/icons/hiflix.svg" alt="hiflix" />
               </div>
             </div>
           </section>
@@ -507,19 +465,22 @@
             <h3>Follow us</h3>
             <div class="social-links">
               <a href="#" class="social-link">
-                <img src="./assets/facebook.svg" alt="facebook" />
+                <img src="./assets/images/icons/facebook.svg" alt="facebook" />
                 Tickitz Cinema id
               </a>
               <a href="#" class="social-link">
-                <img src="./assets/instagram.svg" alt="instagram" />
+                <img
+                  src="./assets/images/icons/instagram.svg"
+                  alt="instagram"
+                />
                 tickitz.id
               </a>
               <a href="#" class="social-link">
-                <img src="./assets/twitter.svg" alt="twitter" />
+                <img src="./assets/images/icons/twitter.svg" alt="twitter" />
                 tickitz.id
               </a>
               <a href="#" class="social-link">
-                <img src="./assets/youtube.svg" alt="youtube" />
+                <img src="./assets/images/icons/youtube.svg" alt="youtube" />
                 Tickitz Cinema id
               </a>
             </div>

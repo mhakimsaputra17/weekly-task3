@@ -900,7 +900,7 @@ footer {
     padding: 15px 20px;
   }
   .navbar-brand img {
-    content: url("../assets/Tickitz2.svg");
+    content: url("/assets//images/logo/Tickitz2.svg");
   }
 
   .navbar-menu,
@@ -910,7 +910,7 @@ footer {
 
   .hamburger-menu {
     display: flex;
-    content: url("../assets/gg_menu-right-alt.svg");
+    content: url("/assets/images/icons/gg_menu-right-alt.svg");
   }
 
   .mobile-menu {
@@ -991,7 +991,7 @@ footer {
   }
 
   .logo img {
-    content: url("../assets/Tickitz2.svg");
+    content: url("/assets//images/logo/Tickitz2.svg");
   }
 
   .tagline {
@@ -1036,6 +1036,6 @@ footer {
   }
 
   .logo img {
-    content: url("../assets/Tickitz2.svg");
+    content: url("/assets//images/logo/Tickitz2.svg");
   }
 }

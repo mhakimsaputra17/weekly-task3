@@ -1,3 +1,4 @@
+/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -18,16 +19,13 @@ body {
   background-color: #f5f5f5;
   position: relative;
   overflow: hidden;
-  background-image: url("../assets/png/marvel.png");
+  background-image: url("../../assets/images/backgrounds/marvel.png");
   background-attachment: fixed;
   background-position-y: center;
   background-size: cover;
-  /* box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5); */
-  /* box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2); */
 }
 
-/* Background image */
-
+/* Background and main content */
 .main-content {
   position: relative;
   min-height: 100vh;
@@ -38,8 +36,19 @@ body {
   padding: 20px;
 }
 
-/* Login card */
-.login-card {
+/* Logo */
+.logo-container {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.logo {
+  max-width: 180px;
+  height: auto;
+}
+
+/* Register card */
+.register-card {
   background-color: white;
   border-radius: 16px;
   width: 90%;
@@ -49,27 +58,57 @@ body {
   margin: 0 auto;
 }
 
-.welcome-text {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  text-align: center;
+/* Progress steps */
+.progress-steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 0 20px;
 }
 
-.wave-emoji {
-  font-size: 22px;
-  margin-left: 5px;
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 }
 
-.login-instruction {
-  color: #8a8a9a;
-  text-align: center;
-  margin-bottom: 20px;
+.step-number {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.step.active .step-number {
+  background-color: #4169e1;
+  color: white;
+}
+
+.step-label {
   font-size: 14px;
-  line-height: 1.4;
+  color: #666;
 }
 
-/* form styles */
+.step.active .step-label {
+  color: #4169e1;
+  font-weight: 500;
+}
+
+.step-line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: #e0e0e0;
+  margin: 0 10px;
+}
+
+/* Form styles */
 .form-group {
   margin-bottom: 20px;
 }
@@ -95,6 +134,7 @@ body {
   outline: none;
 }
 
+/* Password field */
 .password-container {
   position: relative;
 }
@@ -104,29 +144,42 @@ body {
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
-  cursor: pointer;
   background: none;
   border: none;
   color: #8a8a9a;
+  cursor: pointer;
 }
 
 .eye-icon {
-  font-size: 16px;
   color: #8a8a9a;
+  font-size: 16px;
 }
 
-.forgot-password {
-  text-align: right;
-  margin-bottom: 20px;
+/* Checkbox styles */
+.checkbox-group {
+  margin-bottom: 25px;
 }
 
-.forgot-password a {
-  color: #4169e1;
-  text-decoration: none;
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.checkbox-container input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+}
+
+.checkbox-label {
   font-size: 14px;
+  color: #333;
 }
 
-.login-button {
+/* Register button */
+.register-button {
   width: 100%;
   padding: 12px;
   background-color: #4169e1;
@@ -137,15 +190,30 @@ body {
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.2s;
+  margin-bottom: 20px;
 }
 
-.login-button:hover {
+.register-button:hover {
   background-color: #3657c0;
 }
 
+/* Login link */
+.login-link {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+.login-link a {
+  color: #4169e1;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Divider */
 .divider {
   position: relative;
-
   text-align: center;
   margin: 20px 0;
 }
@@ -177,8 +245,7 @@ body {
   font-size: 14px;
 }
 
-/* social login */
-
+/* Social login */
 .social-login {
   display: flex;
   justify-content: space-between;
@@ -194,6 +261,7 @@ body {
   padding: 10px;
   border: 1px solid #e0e0e0;
   border-radius: 4px;
+  background-color: white;
   cursor: pointer;
   font-size: 14px;
   color: #555;
@@ -204,32 +272,12 @@ body {
   height: 20px;
 }
 
-/* Logo container styling */
-.logo-container {
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.logo {
-  max-width: 180px;
-  height: auto;
-}
-
 /* Responsive Design */
 /* Desktop and larger screens */
 @media (min-width: 1200px) {
-  .login-card {
+  .register-card {
     max-width: 520px;
     padding: 60px;
-  }
-
-  .welcome-text {
-    font-size: 28px;
-  }
-
-  .login-instruction {
-    font-size: 16px;
-    margin-bottom: 30px;
   }
 
   .form-group {
@@ -241,7 +289,7 @@ body {
     font-size: 16px;
   }
 
-  .login-button {
+  .register-button {
     padding: 14px;
     font-size: 18px;
   }
@@ -249,17 +297,9 @@ body {
 
 /* Tablet devices */
 @media (min-width: 769px) and (max-width: 1199px) {
-  .login-card {
+  .register-card {
     max-width: 480px;
     padding: 50px;
-  }
-
-  .welcome-text {
-    font-size: 24px;
-  }
-
-  .login-instruction {
-    font-size: 14px;
   }
 }
 
@@ -269,19 +309,10 @@ body {
     max-width: 150px;
   }
 
-  .login-card {
+  .register-card {
     padding: 30px 25px;
     width: 95%;
     max-width: 400px;
-  }
-
-  .welcome-text {
-    font-size: 20px;
-  }
-
-  .login-instruction {
-    font-size: 13px;
-    margin-bottom: 15px;
   }
 
   .form-group {
@@ -293,7 +324,7 @@ body {
     font-size: 14px;
   }
 
-  .login-button {
+  .register-button {
     font-size: 16px;
     padding: 12px;
   }
@@ -309,17 +340,9 @@ body {
 }
 
 @media (max-width: 576px) {
-  .login-card {
+  .register-card {
     padding: 25px 20px;
     border-radius: 12px;
-  }
-
-  .welcome-text {
-    font-size: 18px;
-  }
-
-  .login-instruction {
-    font-size: 12px;
   }
 
   .form-group input {
@@ -327,12 +350,12 @@ body {
     padding: 10px;
   }
 
-  .login-button {
+  .register-button {
     font-size: 14px;
     padding: 10px;
   }
 
-  .forgot-password a {
+  .login-link a {
     font-size: 12px;
   }
 
@@ -344,6 +367,15 @@ body {
   .divider span {
     font-size: 12px;
   }
+
+  .progress-steps {
+    /* padding: 0 10px; */
+    display: none;
+  }
+
+  .step-label {
+    font-size: 12px;
+  }
 }
 
 /* Small mobile devices */
@@ -352,11 +384,7 @@ body {
     max-width: 120px;
   }
 
-  .login-card {
+  .register-card {
     padding: 20px 15px;
-  }
-
-  .welcome-text {
-    font-size: 16px;
   }
 }
