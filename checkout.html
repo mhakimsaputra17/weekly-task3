@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movies</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css"
+      rel="stylesheet"
+    />
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/checkout.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <!-- Logo Tickitz -->
+        <div class="navbar-brand">
+          <a href="/index.html">
+            <img
+              class="logo-color"
+              src="/assets/tickets.svg"
+              alt="logo-tickitz"
+            />
+          </a>
+        </div>
+
+        <!-- Nav menu in the middle -->
+        <div class="navbar-menu">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./movies.html">Movie</a></li>
+            <li><a href="./buyticket.html">Buy Ticket</a></li>
+          </ul>
+        </div>
+
+        <!-- Auth Button in Right -->
+        <div class="navbar-auth">
+          <a href="./signin.html" class="btn btn-outline">Sign in</a>
+          <a href="./signup.html" class="btn btn-primary">Sign Up</a>
+        </div>
+
+        <!-- Hamburger Menu for Mobile -->
+        <div class="hamburger-menu" id="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- main -->
+      <!-- main -->
+      <div class="container">
+        <!-- Progress steps -->
+        <div class="progress-steps">
+          <div class="step">
+            <div class="step-icon step-completed">✓</div>
+            <div class="step-label">Dates And Time</div>
+            <div class="step-line"></div>
+          </div>
+          <div class="step">
+            <div class="step-icon step-completed">✓</div>
+            <div class="step-label">Seat</div>
+            <div class="step-line"></div>
+          </div>
+          <div class="step">
+            <div class="step-icon step-current">3</div>
+            <div class="step-label">Payment</div>
+          </div>
+        </div>
+
+        <!-- Main content card -->
+        <div class="payment-card">
+          <!-- Payment Info Section -->
+          <h2 class="section-header">Payment Info</h2>
+
+          <div class="info-label">DATE & TIME</div>
+          <div class="info-value">Tuesday, 07 July 2020 at 02:00pm</div>
+          <div class="info-divider"></div>
+
+          <div class="info-label">MOVIE TITLE</div>
+          <div class="info-value">Spider-Man: Homecoming</div>
+          <div class="info-divider"></div>
+
+          <div class="info-label">CINEMA NAME</div>
+          <div class="info-value">CineOne21 Cinema</div>
+          <div class="info-divider"></div>
+
+          <div class="info-label">NUMBER OF TICKETS</div>
+          <div class="info-value">3 pieces</div>
+          <div class="info-divider"></div>
+
+          <div class="info-label">TOTAL PAYMENT</div>
+          <div class="info-value payment-amount">$30.00</div>
+
+          <!-- Personal Information Section -->
+          <h2 class="section-header">Personal Information</h2>
+
+          <div class="form-group">
+            <label for="fullName" class="form-label">Full Name</label>
+            <input
+              type="text"
+              id="fullName"
+              class="form-control"
+              value="Jonas El Rodriguez"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input
+              type="email"
+              id="email"
+              class="form-control"
+              value="jonasrodri123@gmail.com"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="phoneCode" class="form-label">Phone Number</label>
+            <div class="phone-input">
+              <input
+                type="text"
+                id="phoneCode"
+                class="form-control phone-code"
+                value="+62"
+              />
+              <input
+                type="text"
+                id="phoneNumber"
+                class="form-control phone-number"
+                value="8144568721"
+              />
+            </div>
+          </div>
+
+          <!-- Payment Method Section -->
+          <h2 class="section-header">Payment Method</h2>
+
+          <div class="payment-methods">
+            <div class="payment-method" title="Google Pay">
+              <!-- Placeholder for Google Pay icon -->
+              <img src="./assets/googlepay.svg" alt="googlepay" />
+            </div>
+            <div class="payment-method" title="Visa">
+              <!-- Placeholder for Visa icon -->
+              <img src="./assets/visa.svg" alt="visa" />
+            </div>
+            <div class="payment-method" title="GoPay">
+              <!-- Placeholder for GoPay icon -->
+              <img src="./assets/gopay.svg" alt="gopay" />
+            </div>
+            <div class="payment-method" title="PayPal">
+              <!-- Placeholder for PayPal icon -->
+              <img src="./assets/paypal.svg" alt="paypal" />
+            </div>
+            <div class="payment-method" title="Dana">
+              <!-- Placeholder for Dana icon -->
+              <img src="./assets/dana2.png" alt="dana" />
+            </div>
+            <div class="payment-method" title="BCA">
+              <!-- Placeholder for BCA icon -->
+              <img src="./assets/bca.svg" alt="bca" />
+            </div>
+            <div class="payment-method" title="Bank BRI">
+              <!-- Placeholder for Bank BRI icon -->
+              <img src="./assets/bri.svg" alt="bri" />
+            </div>
+            <div class="payment-method" title="OVO">
+              <!-- Placeholder for OVO icon -->
+              <img src="./assets/ovo.svg" alt="ovo" />
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="button" class="btn-submit">Pay your order</button>
+        </div>
+      </div>
+
+      <!--  footer -->
+      <footer>
+        <div class="footer-container">
+          <section class="footer-section">
+            <div class="logo">
+              <img src="./assets/tickets.svg" alt="tickitz footer" />
+            </div>
+            <p class="tagline">
+              Stop waiting in line. Buy tickets conveniently, watch movies
+              quietly.
+            </p>
+          </section>
+
+          <section class="footer-section">
+            <h3>Explore</h3>
+            <nav class="nav-links">
+              <a href="#">Cinemas</a>
+              <a href="#">Movies List</a>
+              <a href="#">My Ticket</a>
+              <a href="#">Notification</a>
+            </nav>
+          </section>
+
+          <section class="footer-section">
+            <h3>Our Sponsor</h3>
+            <div class="sponsors">
+              <div class="sponsor-logo">
+                <img src="/assets/edu.svg" alt="ebu-id" />
+              </div>
+              <div class="sponsor-logo">
+                <img src="./assets/cineone.svg" alt="cineone" />
+              </div>
+              <div class="sponsor-logo">
+                <img src="./assets/hiflix.svg" alt="hiflix" />
+              </div>
+            </div>
+          </section>
+
+          <section class="footer-section">
+            <h3>Follow us</h3>
+            <div class="social-links">
+              <a href="#" class="social-link">
+                <img src="./assets/facebook.svg" alt="facebook" />
+                Tickitz Cinema id
+              </a>
+              <a href="#" class="social-link">
+                <img src="./assets/instagram.svg" alt="instagram" />
+                tickitz.id
+              </a>
+              <a href="#" class="social-link">
+                <img src="./assets/twitter.svg" alt="twitter" />
+                tickitz.id
+              </a>
+              <a href="#" class="social-link">
+                <img src="./assets/youtube.svg" alt="youtube" />
+                Tickitz Cinema id
+              </a>
+            </div>
+          </section>
+        </div>
+        <div class="copyright">© 2020 Tickitz. All Rights Reserved.</div>
+      </footer>
+    </main>
+  </body>
+</html>
