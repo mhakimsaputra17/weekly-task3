@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movies</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css"
+      rel="stylesheet"
+    />
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="ticket-result.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <!-- Logo Tickitz -->
+        <div class="navbar-brand">
+          <a href="../../index.html">
+            <img
+              class="logo-color"
+              src="../../assets/images/logo/tickets.svg"
+              alt="logo-tickitz"
+            />
+          </a>
+        </div>
+
+        <!-- Nav menu in the middle -->
+        <div class="navbar-menu">
+          <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="./movies.html">Movie</a></li>
+            <li><a href="../order/order-page.html">Buy Ticket</a></li>
+          </ul>
+        </div>
+
+        <!-- Auth Button in Right -->
+        <div class="navbar-auth">
+          <a href="../auth/signin.html" class="btn btn-outline">Sign in</a>
+          <a href="../auth/signup.html" class="btn btn-primary">Sign Up</a>
+        </div>
+
+        <!-- Hamburger Menu for Mobile -->
+        <div class="hamburger-menu" id="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+
+    <!-- main -->
+     <main class="tickett">
+
+    
+    <main class="ticket-container">
+        <!-- Left side with movie poster background -->
+        <section class="poster-section">
+            <div class="poster-content">
+                <img  src="/assets/images/logo/tizkitz_signin.svg" alt="">
+                <h2 class="thank-you">Thankyou For Purchasing</h2>
+                <p class="description">Lorem ipsum dolor sit amet consectetur. Quam pretium pretium tempor integer sed magna et.</p>
+                <div class="download-prompt">
+                    <p>Please Download Your Ticket</p>
+                    <span class="arrow">→</span>
+                </div>
+            </div>
+            <!-- Movie poster will be added as background in CSS -->
+        </section>
+
+        <!-- Right side with ticket details -->
+        <section class="ticket-details">
+            <div class="ticket-card">
+                <!-- QR code placeholder -->
+                <div class="qr-code-container">
+                    <div class="qr-code">
+                        <img src="/assets/images/poster/QR Code 1.png" alt="">
+                    </div>
+                    <!-- Perforated edge with cutouts -->
+                    <div class="perforation">
+                        <div class="cutout left"></div>
+                        <div class="dashed-line"></div>
+                        <div class="cutout right"></div>
+                    </div>
+                </div>
+
+                <!-- Ticket information -->
+                <div class="ticket-info">
+                    <div class="info-row">
+                        <div class="info-column">
+                            <p class="info-label">Movie</p>
+                            <p class="info-value">Spider-Man: ...</p>
+                        </div>
+                        <div class="info-column">
+                            <p class="info-label">Category</p>
+                            <p class="info-value">PG-13</p>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-column">
+                            <p class="info-label">Date</p>
+                            <p class="info-value">07 Jul</p>
+                        </div>
+                        <div class="info-column">
+                            <p class="info-label">Time</p>
+                            <p class="info-value">2:00pm</p>
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-column">
+                            <p class="info-label">Count</p>
+                            <p class="info-value">3 pcs</p>
+                        </div>
+                        <div class="info-column">
+                            <p class="info-label">Seats</p>
+                            <p class="info-value">C4, C5, C6</p>
+                        </div>
+                    </div>
+
+                    <div class="total-row">
+                        <p class="total-label">Total</p>
+                        <p class="total-value">$30.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action buttons -->
+            <div class="action-buttons">
+                <button class="download-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Download
+                </button>
+                <button class="done-btn">Done</button>
+            </div>
+        </section>
+    </main>
+    </main>
+    
+
+      <!--  footer -->
+      <footer>
+        <div class="footer-container">
+          <section class="footer-section">
+            <div class="logo">
+              <img src="/assets/images/logo/tickets.svg" alt="tickitz footer" />
+            </div>
+            <p class="tagline">
+              Stop waiting in line. Buy tickets conveniently, watch movies
+              quietly.
+            </p>
+          </section>
+
+          <section class="footer-section">
+            <h3>Explore</h3>
+            <nav class="nav-links">
+              <a href="#">Cinemas</a>
+              <a href="#">Movies List</a>
+              <a href="#">My Ticket</a>
+              <a href="#">Notification</a>
+            </nav>
+          </section>
+
+          <section class="footer-section">
+            <h3>Our Sponsor</h3>
+            <div class="sponsors">
+              <div class="sponsor-logo">
+                <img src="/assets/images/icons/edu.svg" alt="ebu-id" />
+              </div>
+              <div class="sponsor-logo">
+                <img src="/assets/images/icons/cineone.svg" alt="cineone" />
+              </div>
+              <div class="sponsor-logo">
+                <img src="/assets/images/icons/hiflix.svg" alt="hiflix" />
+              </div>
+            </div>
+          </section>
+
+          <section class="footer-section">
+            <h3>Follow us</h3>
+            <div class="social-links">
+              <a href="#" class="social-link">
+                <img src="/assets/images/icons/facebook.svg" alt="facebook" />
+                Tickitz Cinema id
+              </a>
+              <a href="#" class="social-link">
+                <img src="/assets/images/icons/instagram.svg" alt="instagram" />
+                tickitz.id
+              </a>
+              <a href="#" class="social-link">
+                <img src="/assets/images/icons/twitter.svg" alt="twitter" />
+                tickitz.id
+              </a>
+              <a href="#" class="social-link">
+                <img src="/assets/images/icons/youtube.svg" alt="youtube" />
+                Tickitz Cinema id
+              </a>
+            </div>
+          </section>
+        </div>
+        <div class="copyright">© 2020 Tickitz. All Rights Reserved.</div>
+      </footer>
+    </main>
+    
+  </body>
+</html>

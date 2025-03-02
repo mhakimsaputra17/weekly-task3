@@ -5,14 +5,6 @@
   font-family: "Mulish", "Roboto", sans-serif;
 }
 
-body::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: -1;
-}
-
 body {
   height: 100vh;
   background-color: #f5f5f5;
@@ -22,11 +14,15 @@ body {
   background-attachment: fixed;
   background-position-y: center;
   background-size: cover;
-  /* box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5); */
-  /* box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2); */
 }
 
-/* Background image */
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
 
 .main-content {
   position: relative;
@@ -36,6 +32,17 @@ body {
   align-items: center;
   justify-content: center;
   padding: 20px;
+}
+
+/* Logo styling */
+.logo-container {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.logo {
+  max-width: 180px;
+  height: auto;
 }
 
 /* Login card */
@@ -53,7 +60,7 @@ body {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
-  text-align: center;
+  text-align: start;
 }
 
 .wave-emoji {
@@ -63,13 +70,13 @@ body {
 
 .login-instruction {
   color: #8a8a9a;
-  text-align: center;
+  text-align: start;
   margin-bottom: 20px;
   font-size: 14px;
   line-height: 1.4;
 }
 
-/* form styles */
+/* Form styles */
 .form-group {
   margin-bottom: 20px;
 }
@@ -88,6 +95,7 @@ body {
   border-radius: 4px;
   font-size: 14px;
   transition: border-color 0.2s;
+  background: #fcfdfe;
 }
 
 .form-group input:focus {
@@ -126,6 +134,7 @@ body {
   font-size: 14px;
 }
 
+/* Button styles */
 .login-button {
   width: 100%;
   padding: 12px;
@@ -143,9 +152,9 @@ body {
   background-color: #3657c0;
 }
 
+/* Divider */
 .divider {
   position: relative;
-
   text-align: center;
   margin: 20px 0;
 }
@@ -177,8 +186,7 @@ body {
   font-size: 14px;
 }
 
-/* social login */
-
+/* Social login */
 .social-login {
   display: flex;
   justify-content: space-between;
@@ -192,11 +200,13 @@ body {
   justify-content: center;
   gap: 8px;
   padding: 10px;
-  border: 1px solid #e0e0e0;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.08);
   border-radius: 4px;
   cursor: pointer;
   font-size: 14px;
   color: #555;
+  background: #fff;
+  border: none;
 }
 
 .social-button .social-icon {
@@ -204,19 +214,7 @@ body {
   height: 20px;
 }
 
-/* Logo container styling */
-.logo-container {
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.logo {
-  max-width: 180px;
-  height: auto;
-}
-
 /* Responsive Design */
-/* Desktop and larger screens */
 @media (min-width: 1200px) {
   .login-card {
     max-width: 520px;
@@ -247,7 +245,6 @@ body {
   }
 }
 
-/* Tablet devices */
 @media (min-width: 769px) and (max-width: 1199px) {
   .login-card {
     max-width: 480px;
@@ -263,7 +260,6 @@ body {
   }
 }
 
-/* Mobile devices */
 @media (max-width: 768px) {
   .logo {
     max-width: 150px;
@@ -346,7 +342,6 @@ body {
   }
 }
 
-/* Small mobile devices */
 @media (max-width: 320px) {
   .logo {
     max-width: 120px;

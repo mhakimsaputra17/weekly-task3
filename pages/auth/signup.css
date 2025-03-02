@@ -1,17 +1,8 @@
-/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Mulish", "Roboto", sans-serif;
-}
-
-body::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: -1;
 }
 
 body {
@@ -25,7 +16,14 @@ body {
   background-size: cover;
 }
 
-/* Background and main content */
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+
 .main-content {
   position: relative;
   min-height: 100vh;
@@ -123,10 +121,11 @@ body {
 .form-group input {
   width: 100%;
   padding: 12px 15px;
-  border: 1px solid #ddd;
   border-radius: 4px;
   font-size: 14px;
   transition: border-color 0.2s;
+  border: 1px solid #dedede;
+  background: #fcfdfe;
 }
 
 .form-group input:focus {
@@ -259,12 +258,13 @@ body {
   justify-content: center;
   gap: 8px;
   padding: 10px;
-  border: 1px solid #e0e0e0;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
   border-radius: 4px;
-  background-color: white;
   cursor: pointer;
   font-size: 14px;
   color: #555;
+  background: #fff;
+  border: none;
 }
 
 .social-button .social-icon {
@@ -273,7 +273,6 @@ body {
 }
 
 /* Responsive Design */
-/* Desktop and larger screens */
 @media (min-width: 1200px) {
   .register-card {
     max-width: 520px;
@@ -295,7 +294,6 @@ body {
   }
 }
 
-/* Tablet devices */
 @media (min-width: 769px) and (max-width: 1199px) {
   .register-card {
     max-width: 480px;
@@ -303,7 +301,6 @@ body {
   }
 }
 
-/* Mobile devices */
 @media (max-width: 768px) {
   .logo {
     max-width: 150px;
@@ -369,7 +366,6 @@ body {
   }
 
   .progress-steps {
-    /* padding: 0 10px; */
     display: none;
   }
 
@@ -378,7 +374,6 @@ body {
   }
 }
 
-/* Small mobile devices */
 @media (max-width: 320px) {
   .logo {
     max-width: 120px;
