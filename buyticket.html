@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movies</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css"
+      rel="stylesheet"
+    />
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/buyticket.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <!-- Logo Tickitz -->
+        <div class="navbar-brand">
+          <a href="/index.html">
+            <img
+              class="logo-color"
+              src="/assets/tickets.svg"
+              alt="logo-tickitz"
+            />
+          </a>
+        </div>
+
+        <!-- Nav menu in the middle -->
+        <div class="navbar-menu">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#">Movie</a></li>
+            <li><a href="#">Buy Ticket</a></li>
+          </ul>
+        </div>
+
+        <!-- Auth Button in Right -->
+        <div class="navbar-auth">
+          <a href="./signin.html" class="btn btn-outline">Sign in</a>
+          <a href="./signup.html" class="btn btn-primary">Sign Up</a>
+        </div>
+
+        <!-- Hamburger Menu for Mobile -->
+        <div class="hamburger-menu" id="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- main content -->
+    <header class="banner">
+      <img
+        src="./assets/image/spiderman_home.jpg"
+        alt="Spider-Man: Homecoming banner"
+      />
+    </header>
+
+    <!-- Main content -->
+    <main class="container">
+      <!-- Movie details section -->
+      <section class="movie-details">
+        <!-- Movie poster -->
+        <div class="movie-poster">
+          <img
+            src="./assets/image/spiderman.png"
+            alt="Spider-Man: Homecoming poster"
+          />
+        </div>
+
+        <!-- Movie information -->
+        <div class="movie-info">
+          <h1 class="movie-title">Spider-Man: Homecoming</h1>
+
+          <!-- Genres -->
+          <div class="movie-genres">
+            <span class="genre">Action</span>
+            <span class="genre">Adventure</span>
+          </div>
+
+          <!-- Movie metadata -->
+          <div class="movie-metadata">
+            <div class="metadata-item">
+              <div class="metadata-label">Release date</div>
+              <div class="metadata-value">June 28, 2017</div>
+            </div>
+
+            <div class="metadata-item">
+              <div class="metadata-label">Directed by</div>
+              <div class="metadata-value">Jon Watts</div>
+            </div>
+
+            <div class="metadata-item">
+              <div class="metadata-label">Duration</div>
+              <div class="metadata-value">2 hours 13 minutes</div>
+            </div>
+
+            <div class="metadata-item">
+              <div class="metadata-label">Casts</div>
+              <div class="metadata-value">
+                Tom Holland, Michael Keaton, Robert Downey Jr
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Synopsis section -->
+      <section class="synopsis">
+        <h2>Synopsis</h2>
+        <p>
+          Thrilled by his experience with the Avengers, Peter returns home,
+          where he lives with his Aunt May, under the watchful eye of his new
+          mentor Tony Stark. Peter tries to fall back into his normal daily
+          routine - distracted by thoughts of proving himself to be more than
+          just your friendly neighborhood Spider-Man - but when the Vulture
+          emerges as a new villain, everything that Peter holds most important
+          will be threatened.
+        </p>
+      </section>
+
+      <!-- Booking section -->
+      <section class="booking">
+        <h2>Book Tickets</h2>
+
+        <!-- Booking filters -->
+        <div class="booking-filters">
+          <div class="filter-group">
+            <label class="filter-label">Choose Date</label>
+            <div class="filter-select">
+              <span>
+                <span class="filter-icon">
+                  <img src="./assets/calendar.svg" alt="calender" />
+                </span>
+                21/07/20
+              </span>
+              <i></i>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <label class="filter-label">Choose Time</label>
+            <div class="filter-select">
+              <span>
+                <span class="filter-icon">
+                  <img src="./assets/time.svg" alt="time icon" />
+                </span>
+                08 : 30 AM
+              </span>
+              <i></i>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <label class="filter-label">Choose Location</label>
+            <div class="filter-select">
+              <span>
+                <span class="filter-icon">
+                  <img src="./assets/location.svg" alt="location icon" />
+                </span>
+                Purwokerto
+              </span>
+              <i></i>
+            </div>
+          </div>
+
+          <button class="filter-button">Filter</button>
+        </div>
+
+        <!-- Cinema selection -->
+        <div class="cinema-selection">
+          <div class="cinema-header">
+            <h3>Choose Cinema</h3>
+            <span class="result-count">39 Result</span>
+          </div>
+
+          <div class="cinema-grid">
+            <div class="cinema-card">
+              <img src="./assets/ebv.svg" alt="ebu.id" class="cinema-logo" />
+            </div>
+
+            <div class="cinema-card" style="background-color: #3366e6">
+              <img
+                src="./assets/hiflix 3.svg"
+                alt="hiflix"
+                class="cinema-logo"
+              />
+            </div>
+
+            <div class="cinema-card">
+              <img
+                src="./assets/cineone.svg"
+                alt="CineOne21"
+                class="cinema-logo"
+              />
+            </div>
+
+            <div class="cinema-card">
+              <img src="./assets/ebv.svg" alt="ebu.id" class="cinema-logo" />
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <div class="pagination">
+            <div class="page-number active">1</div>
+            <div class="page-number">2</div>
+            <div class="page-number">3</div>
+            <div class="page-number">4</div>
+          </div>
+        </div>
+
+        <!-- Book now button -->
+        <div class="book-now-container">
+          <button class="book-now-button">Book Now</button>
+        </div>
+      </section>
+    </main>
+
+    <main>
+      <!--  footer -->
+      <footer>
+        <div class="footer-container">
+          <section class="footer-section">
+            <div class="logo">
+              <img src="./assets/tickets.svg" alt="tickitz footer" />
+            </div>
+            <p class="tagline">
+              Stop waiting in line. Buy tickets conveniently, watch movies
+              quietly.
+            </p>
+          </section>
+
+          <section class="footer-section">
+            <h3>Explore</h3>
+            <nav class="nav-links">
+              <a href="#">Cinemas</a>
+              <a href="#">Movies List</a>
+              <a href="#">My Ticket</a>
+              <a href="#">Notification</a>
+            </nav>
+          </section>
+
+          <section class="footer-section">
+            <h3>Our Sponsor</h3>
+            <div class="sponsors">
+              <div class="sponsor-logo">
+                <img src="/assets/edu.svg" alt="ebu-id" />
+              </div>
+              <div class="sponsor-logo">
+                <img src="./assets/cineone.svg" alt="cineone" />
+              </div>
+              <div class="sponsor-logo">
+                <img src="./assets/hiflix.svg" alt="hiflix" />
+              </div>
+            </div>
+          </section>
+
+          <section class="footer-section">
+            <h3>Follow us</h3>
+            <div class="social-links">
+              <a href="#" class="social-link">
+                <img src="./assets/facebook.svg" alt="facebook" />
+                Tickitz Cinema id
+              </a>
+              <a href="#" class="social-link">
+                <img src="./assets/instagram.svg" alt="instagram" />
+                tickitz.id
+              </a>
+              <a href="#" class="social-link">
+                <img src="./assets/twitter.svg" alt="twitter" />
+                tickitz.id
+              </a>
+              <a href="#" class="social-link">
+                <img src="./assets/youtube.svg" alt="youtube" />
+                Tickitz Cinema id
+              </a>
+            </div>
+          </section>
+        </div>
+        <div class="copyright">© 2020 Tickitz. All Rights Reserved.</div>
+      </footer>
+    </main>
+  </body>
+</html>
