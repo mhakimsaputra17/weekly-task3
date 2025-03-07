@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movies</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css"
+      rel="stylesheet"
+    />
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="order-page-seat.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <!-- Logo Tickitz -->
+        <div class="navbar-brand">
+          <a href="/index.html">
+            <img
+              class="logo-color"
+              src="/assets/images/logo/tickets.svg"
+              alt="logo-tickitz"
+            />
+          </a>
+        </div>
+
+        <!-- Nav menu in the middle -->
+        <div class="navbar-menu">
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="../movies/movies.html">Movie</a></li>
+            <li><a href="../order/order-page.html">Buy Ticket</a></li>
+          </ul>
+        </div>
+
+        <!-- Auth Button in Right -->
+        <div class="navbar-auth">
+          <a href="../auth/signin.html" class="btn btn-outline">Sign in</a>
+          <a href="../auth/signup.html" class="btn btn-primary">Sign Up</a>
+        </div>
+
+        <!-- Hamburger Menu for Mobile -->
+        <div class="hamburger-menu" id="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+    <!-- main -->
+    <main class="booking-container">
+      <!-- Progress Steps -->
+      <section class="progress-steps">
+        <div class="step completed">
+          <div class="step-circle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <span class="step-label">Dates And Time</span>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step active">
+          <div class="step-circle">2</div>
+          <span class="step-label">Seat</span>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step">
+          <div class="step-circle">3</div>
+          <span class="step-label">Payment</span>
+        </div>
+      </section>
+
+      <!-- Main Content -->
+      <div class="content-container">
+        <!-- Left Panel -->
+        <section class="left-panel">
+          <!-- Movie Details -->
+          <div class="movie-details">
+            <div class="movie-card">
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot_20250302-141257~2-wakx8t7QtGO1c7pj74lVw6WAmRmnQ0.png"
+                alt="Spider-Man: Homecoming Poster"
+                class="movie-poster"
+              />
+              <div class="movie-info">
+                <h2 class="movie-title">Spider-Man: Homecoming</h2>
+                <div class="movie-genres">
+                  <span class="genre">Action</span>
+                  <span class="genre">Adventure</span>
+                </div>
+                <div class="movie-time">
+                  <span>Regular - 13:00 PM</span>
+                  <button class="change-btn">Change</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Seat Selection -->
+          <div class="seat-selection">
+            <h2 class="section-title">Choose Your Seat</h2>
+
+            <div class="screen-container">
+              <div class="screen-label">Screen</div>
+            </div>
+
+            <div class="seating-chart">
+              <!-- Row Labels -->
+              <div class="row-labels">
+                <div class="row-label">A</div>
+                <div class="row-label">B</div>
+                <div class="row-label">C</div>
+                <div class="row-label">D</div>
+                <div class="row-label">E</div>
+                <div class="row-label">F</div>
+                <div class="row-label">G</div>
+              </div>
+
+              <!-- Left Seats (1-7) -->
+              <div class="seats-grid left-seats">
+                <!-- Row A -->
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat sold"></div>
+                <div class="seat available"></div>
+
+                <!-- Row B -->
+                <div class="seat available"></div>
+                <div class="seat sold"></div>
+                <div class="seat sold"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+
+                <!-- Row C -->
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat selected"></div>
+                <div class="seat selected"></div>
+                <div class="seat selected"></div>
+                <div class="seat available"></div>
+
+                <!-- Row D -->
+                <div class="seat available"></div>
+                <div class="seat sold"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+
+                <!-- Row E -->
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat sold"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+
+                <!-- Row F -->
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+
+                <!-- Row G -->
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat sold"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+              </div>
+
+              <!-- Right Seats (8-14) -->
+              <div class="seats-grid right-seats">
+                <!-- Row A -->
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat sold"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+
+                <!-- Row B -->
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+
+                <!-- Row C -->
+                <div class="seat available"></div>
+                <div class="seat sold"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat sold"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+
+                <!-- Row D -->
+                <div class="seat available"></div>
+                <div class="seat sold"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat sold"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+
+                <!-- Row E -->
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+
+                <!-- Row F -->
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat love-nest"></div>
+                <div class="seat available"></div>
+                <div class="seat sold"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+
+                <!-- Row G -->
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+                <div class="seat available"></div>
+              </div>
+
+              <!-- Column Numbers -->
+              <div class="column-numbers left-numbers">
+                <div class="column-number">1</div>
+                <div class="column-number">2</div>
+                <div class="column-number">3</div>
+                <div class="column-number">4</div>
+                <div class="column-number">5</div>
+                <div class="column-number">6</div>
+                <div class="column-number">7</div>
+              </div>
+
+              <div class="column-numbers right-numbers">
+                <div class="column-number">8</div>
+                <div class="column-number">9</div>
+                <div class="column-number">10</div>
+                <div class="column-number">11</div>
+                <div class="column-number">12</div>
+                <div class="column-number">13</div>
+                <div class="column-number">14</div>
+              </div>
+            </div>
+
+            <!-- Seating Key -->
+            <div class="seating-key">
+              <h3 class="key-title">Seating key</h3>
+              <div class="key-items">
+                <div class="key-item">
+                  <div class="key-indicator available"></div>
+                  <span class="key-label">Available</span>
+                </div>
+                <div class="key-item">
+                  <div class="key-indicator selected"></div>
+                  <span class="key-label">Selected</span>
+                </div>
+                <div class="key-item">
+                  <div class="key-indicator love-nest"></div>
+                  <span class="key-label">Love nest</span>
+                </div>
+                <div class="key-item">
+                  <div class="key-indicator sold"></div>
+                  <span class="key-label">Sold</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Right Panel -->
+        <section class="right-panel">
+          <div class="cinema-details">
+            <h2 class="cinema-name">CineOne21</h2>
+            <h3 class="cinema-title">CineOne21 Cinema</h3>
+
+            <div class="booking-summary">
+              <div class="summary-item">
+                <span class="summary-label">Movie selected</span>
+                <span class="summary-value">Spider-Man: Homecoming</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Tuesday, 07 July 2020</span>
+                <span class="summary-value">13:00pm</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">One ticket price</span>
+                <span class="summary-value">$10</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">Seat choosed</span>
+                <span class="summary-value">C4, C5, C6</span>
+              </div>
+            </div>
+
+            <div class="payment-total">
+              <h3 class="total-label">Total Payment</h3>
+              <span class="total-amount">$30</span>
+            </div>
+
+            <button class="checkout-btn">Checkout now</button>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!--  footer -->
+    <footer>
+      <div class="footer-container">
+        <section class="footer-section">
+          <div class="logo">
+            <img src="/assets/images/logo/tickets.svg" alt="tickitz footer" />
+          </div>
+          <p class="tagline">
+            Stop waiting in line. Buy tickets conveniently, watch movies
+            quietly.
+          </p>
+        </section>
+
+        <section class="footer-section">
+          <h3>Explore</h3>
+          <nav class="nav-links">
+            <a href="#">Cinemas</a>
+            <a href="#">Movies List</a>
+            <a href="#">My Ticket</a>
+            <a href="#">Notification</a>
+          </nav>
+        </section>
+
+        <section class="footer-section">
+          <h3>Our Sponsor</h3>
+          <div class="sponsors">
+            <div class="sponsor-logo">
+              <img src="/assets/images/icons/edu.svg" alt="ebu-id" />
+            </div>
+            <div class="sponsor-logo">
+              <img src="/assets/images/icons/cineone.svg" alt="cineone" />
+            </div>
+            <div class="sponsor-logo">
+              <img src="/assets/images/icons/hiflix.svg" alt="hiflix" />
+            </div>
+          </div>
+        </section>
+
+        <section class="footer-section">
+          <h3>Follow us</h3>
+          <div class="social-links">
+            <a href="#" class="social-link">
+              <img src="/assets/images/icons/facebook.svg" alt="facebook" />
+              Tickitz Cinema id
+            </a>
+            <a href="#" class="social-link">
+              <img src="/assets/images/icons/instagram.svg" alt="instagram" />
+              tickitz.id
+            </a>
+            <a href="#" class="social-link">
+              <img src="/assets/images/icons/twitter.svg" alt="twitter" />
+              tickitz.id
+            </a>
+            <a href="#" class="social-link">
+              <img src="/assets/images/icons/youtube.svg" alt="youtube" />
+              Tickitz Cinema id
+            </a>
+          </div>
+        </section>
+      </div>
+      <div class="copyright">© 2020 Tickitz. All Rights Reserved.</div>
+    </footer>
+  </body>
+</html>
