@@ -697,14 +697,92 @@ footer {
   .navbar-menu ul {
     gap: 1.5rem;
   }
+
+  .profile-container {
+    grid-template-columns: 240px 1fr;
+    padding: 0 20px;
+  }
+
+  .order-card {
+    height: auto;
+    min-height: 241px;
+  }
+
+  .tabs {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 768px) {
   .navbar {
     padding: 15px 20px;
   }
+
+  /* Improved mobile layout for profile container */
+  .profile-container {
+    grid-template-columns: 1fr;
+    padding: 0 15px;
+  }
+
+  .sidebar {
+    height: auto;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+
+  /* Mobile-friendly tabs */
+  .tabs {
+    display: flex;
+    overflow-x: auto;
+    border-radius: 12px;
+  }
+
+  .tab {
+    flex: 1;
+    white-space: nowrap;
+    padding: 15px 10px;
+    font-size: 14px;
+  }
+
+  /* Mobile-optimized order cards */
+  .order-card {
+    padding: 16px;
+  }
+
+  .order-details {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .cinema-logo {
+    justify-self: start;
+  }
+
+  .order-divider {
+    margin: 15px 0;
+  }
+
+  .order-actions {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .status-badges {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .badge {
+    width: 100%;
+  }
+
+  .details-toggle {
+    align-self: flex-end;
+  }
+
+  /* Mobile menu improvements */
   .navbar-brand img {
-    content: url("/assets//images/logo/Tickitz2.svg");
+    content: url("/assets/images/logo/Tickitz2.svg");
   }
 
   .navbar-menu,
@@ -720,33 +798,41 @@ footer {
   .mobile-menu {
     display: flex;
   }
-
-  .footer-container {
-    flex-direction: column;
-    padding: 30px 20px;
-  }
-
-  .footer-section {
-    margin-bottom: 30px;
-    text-align: center;
-  }
-
-  .logo img {
-    content: url("/assets//images/logo/Tickitz2.svg");
-  }
-
-  .tagline {
-    max-width: 100%;
-  }
-
-  .nav-links,
-  .social-links {
-    align-items: center;
-  }
 }
 
 @media screen and (max-width: 480px) {
-  .logo img {
-    content: url("/assets//images/logo/Tickitz2.svg");
+  .profile-container {
+    gap: 15px;
+  }
+
+  .movie-title {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .order-card {
+    padding: 12px;
+  }
+
+  .user-profile .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .loyalty-card {
+    padding: 12px;
+  }
+
+  .points-value {
+    font-size: 24px;
+  }
+
+  /* Footer improvements for very small screens */
+  .footer-container {
+    padding: 20px 15px;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
   }
 }
