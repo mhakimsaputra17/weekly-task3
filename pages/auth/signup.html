@@ -13,6 +13,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="signup.css" />
+    <script src="signup.js" defer></script>
   </head>
   <body>
     <main class="main-content">
@@ -46,10 +47,11 @@
           </div>
         </div>
 
-        <form class="register-form">
+        <form class="register-form" id="registerForm" novalidate>
           <div class="form-group">
             <label for="email">Email</label>
             <input type="email" id="email" placeholder="Enter your email" />
+            <span class="error-message" id="emailError"></span>
           </div>
 
           <div class="form-group">
@@ -70,6 +72,7 @@
                 </span>
               </button>
             </div>
+            <span class="error-message" id="passwordError"></span>
           </div>
 
           <div class="form-group checkbox-group">
@@ -77,6 +80,7 @@
               <input type="checkbox" id="terms" />
               <span class="checkbox-label">I agree to terms & conditions</span>
             </label>
+            <span class="error-message" id="termsError"></span>
           </div>
 
           <button type="submit" class="register-button">Join For Free</button>
