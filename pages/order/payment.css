@@ -365,13 +365,6 @@ header:nth-of-type(1) {
   }
 }
 
-/* Payment methods grid */
-/* Removing this media query to keep 2 columns on all mobile devices */
-/* @media (max-width: 480px) {
-  .payment-methods {
-    grid-template-columns: repeat(1, 1fr);
-  }
-} */
 
 .payment-method {
   border: 1px solid #ddd;
@@ -594,6 +587,160 @@ footer {
   margin: -10px 0 10px;
 }
 
+/* Modal Styles */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1001;
+}
+
+.payment-modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 500px;
+  z-index: 1002;
+  animation: modal-fade-in 0.3s ease-out;
+}
+
+@keyframes modal-fade-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.modal-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  padding: 30px;
+  margin: 0 15px;
+}
+
+.payment-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.payment-header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #222;
+}
+
+.payment-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.payment-label {
+  color: #888;
+  font-size: 16px;
+}
+
+.payment-value {
+  font-weight: 500;
+  font-size: 16px;
+  color: #222;
+}
+
+.payment-value.amount {
+  color: #3366ff;
+  font-weight: 600;
+}
+
+.copy-button {
+  background-color: white;
+  border: 1px solid #3366ff;
+  color: #3366ff;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.account-number-container {
+  display: flex;
+  align-items: center;
+}
+
+.payment-notice {
+  margin: 30px 0;
+  line-height: 1.5;
+  color: #888;
+}
+
+.due-date {
+  color: #e53935;
+  font-weight: 500;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.check-payment-button {
+  background-color: #3366ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(51, 102, 255, 0.2);
+}
+
+.pay-later-button {
+  background: none;
+  border: none;
+  color: #3366ff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .modal-card {
+    padding: 20px;
+  }
+  
+  .payment-field {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .account-number-container {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+
+
+
 /* Responsive styles */
 @media (max-width: 640px) {
   .filter-section {
@@ -688,14 +835,14 @@ footer {
   }
 
   .hero-content {
-    order: 0; /* Memastikan konten teks muncul duluan */
+    order: 0;
     padding-right: 0;
     text-align: center;
-    margin-bottom: 30px; /* Menambah jarak antara teks dan gambar */
+    margin-bottom: 30px; 
   }
 
   .hero-images {
-    order: 1; /* Gambar muncul setelah teks */
+    order: 1; 
   }
 
   .image-flex-container {
