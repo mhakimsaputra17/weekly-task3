@@ -7,24 +7,6 @@ const objOption = {
   },
 };
 
-const getMoviesGenre = async () => {
-  try {
-    const url = "https://api.themoviedb.org/3/genre/movie/list?language=en";
-    const response = await fetch(url, objOption);
-
-    if (!response.ok) {
-      throw new Error(response.statusText);
-    }
-
-    const genreData = await response.json();
-    console.log(genreData.genres);
-  } catch (err) {
-    if (err instanceof Error) console.log(err);
-  }
-};
-
-// getMoviesGenre();
-
 const listGenre = {
   28: "Action",
   12: "Adventure",
@@ -47,82 +29,105 @@ const listGenre = {
   37: "Western",
 };
 
-const myMap = new Map(Object.entries(listGenre));
-// console.log(myMap);
+/**
+ * Creates a movie card element
+ * @param {Object} movie - Movie data
+ * @returns {HTMLElement} The movie card DOM element
+ */
+const createMovieCard = (movie) => {
+  const { genre_ids, original_title, poster_path } = movie;
 
+  // Create movie card container
+  const movieCard = document.createElement("div");
+  movieCard.classList.add("movie-card");
+
+  // Create poster container
+  const poster = document.createElement("div");
+  poster.classList.add("poster");
+
+  // Create and set up movie poster image
+  const image = document.createElement("img");
+  image.src = `https://image.tmdb.org/t/p/w500${poster_path}`;
+  image.alt = `${original_title} movie poster`;
+
+  // Create action buttons container
+  const actions = document.createElement("div");
+  actions.classList.add("actions");
+
+  // Create details button
+  const detailsBtn = document.createElement("a");
+  detailsBtn.href = "/pages/order/order-page.html";
+  detailsBtn.classList.add("button", "button-outline");
+  detailsBtn.textContent = "Details";
+
+  // Create buy ticket button
+  const buyBtn = document.createElement("a");
+  buyBtn.href = "/pages/order/order-page.html";
+  buyBtn.classList.add("button", "button-primary");
+  buyBtn.textContent = "Buy Ticket";
+
+  // Create movie title
+  const title = document.createElement("h3");
+  title.textContent = original_title;
+
+  // Create tags container
+  const tags = document.createElement("div");
+  tags.classList.add("tags");
+
+  // Assemble the movie card
+  actions.appendChild(detailsBtn);
+  actions.appendChild(buyBtn);
+
+  poster.appendChild(image);
+  poster.appendChild(actions);
+
+  movieCard.appendChild(poster);
+  movieCard.appendChild(title);
+  movieCard.appendChild(tags);
+
+  // Add genre tags (limit to 3)
+  const matchingGenres = genre_ids
+    .filter((id) => id in listGenre)
+    .map((id) => listGenre[id]);
+
+  matchingGenres.slice(0, 3).forEach((genreName) => {
+    const genre = document.createElement("span");
+    genre.classList.add("tag");
+    genre.textContent = genreName;
+    tags.appendChild(genre);
+  });
+
+  return movieCard;
+};
+
+/**
+ * Fetch movie data and populate the movie grid
+ */
 const createData = async () => {
   try {
-    //     const test = await getMoviesGenre();
-    // const url ="https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc";
-    // const url = "https://jsonplaceholder.typicode.com/users";
     const url =
-      "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1";
+      "https://api.themoviedb.org/3/movie/popular?language=en-US&page=2";
     const response = await fetch(url, objOption);
+
     if (!response.ok) {
       throw new Error(response.statusText);
     }
-    const postData = await response.json();
 
-    console.log(postData.results);
-    for (const { genre_ids, original_title, poster_path } of postData.results) {
-      //   console.log(overview);
-      const moviePoster = document.createElement("div");
-      moviePoster.classList.add("movie-card");
+    const { results } = await response.json();
+    const movieGridElement = document.querySelector(".movie-grid");
 
-      const poster = document.createElement("div");
-      poster.classList.add("poster");
+    // Clear any existing content
+    movieGridElement.innerHTML = "";
 
-      const image = document.createElement("img");
-      image.src = `https://image.tmdb.org/t/p/w500${poster_path}`;
-      image.alt = `${original_title} movie poster`;
-
-      const action = document.createElement("div");
-      action.classList.add("actions");
-
-      const detailsBtn = document.createElement("a");
-      detailsBtn.href = "/pages/order/order-page.html";
-      detailsBtn.classList.add("button", "button-outline");
-      detailsBtn.textContent = "Details";
-
-      const buyBtn = document.createElement("a");
-      buyBtn.href = "/pages/order/order-page.html";
-      buyBtn.classList.add("button", "button-primary");
-      buyBtn.textContent = "Buy Ticket";
-
-      const title = document.createElement("h3");
-      title.textContent = original_title;
-
-      const tags = document.createElement("div");
-      tags.classList.add("tags");
-
-      // appendChild method
-      action.appendChild(detailsBtn);
-      action.appendChild(buyBtn);
-
-      poster.appendChild(image);
-      poster.appendChild(action);
-
-      moviePoster.appendChild(poster);
-      moviePoster.appendChild(title);
-      document.querySelector(".movie-grid").appendChild(moviePoster);
-      moviePoster.appendChild(tags);
-
-      const matchingGenres = genre_ids
-        .filter((id) => id in listGenre)
-        .map((id) => {
-          return listGenre[id];
-        });
-
-      for (let i = 0; i < matchingGenres.length; i++) {
-        const genre = document.createElement("span");
-        genre.classList.add("tag");
-        genre.textContent = matchingGenres[i];
-        tags.appendChild(genre);
-      }
-    }
+    // Add movie cards to the grid
+    results.forEach((movie) => {
+      const movieCard = createMovieCard(movie);
+      movieGridElement.appendChild(movieCard);
+    });
   } catch (err) {
-    if (err instanceof Error) console.log(err);
+    console.error("Error fetching movie data:", err);
   }
 };
 
+// Initialize the page
 createData();
