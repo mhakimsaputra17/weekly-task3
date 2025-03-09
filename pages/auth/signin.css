@@ -103,6 +103,32 @@ body::before {
   outline: none;
 }
 
+/* Error and success message styles */
+.error-message {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+  font-weight: 500;
+}
+
+.form-group input.error {
+  border-color: #e74c3c;
+  background-color: rgba(231, 76, 60, 0.05);
+}
+
+.success-message {
+  color: #2ecc71;
+  background-color: rgba(46, 204, 113, 0.1);
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 15px;
+  text-align: center;
+  font-weight: 500;
+  border: 1px solid rgba(46, 204, 113, 0.3);
+  display: none;
+}
+
 .password-container {
   position: relative;
 }
