@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tickitz - Book Movie Tickets Online</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@3.0.1/modern-normalize.min.css"
+      rel="stylesheet"
+    />
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="movie-list.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <!-- Logo Tickitz -->
+        <div class="navbar-brand">
+          <a href="/index.html">
+            <img
+              class="logo-color"
+              src="/assets/images/logo/tickets.svg"
+              alt="logo-tickitz"
+            />
+          </a>
+        </div>
+
+        <!-- Nav menu in the middle -->
+        <div class="navbar-menu">
+          <ul>
+            <li><a href="/pages/admin/dashboard.html">Dashboard</a></li>
+            <li><a href="/pages/admin/movie-list.html">Movie</a></li>
+          </ul>
+        </div>
+
+        <!-- Auth Button in Right -->
+        <div class="navbar-auth">
+          <!-- <a href="./pages/auth/signin.html" class="btn btn-outline">Sign in</a>
+          <a href="./pages/auth/signup.html" class="btn btn-primary">Sign Up</a> -->
+
+          <select name="location" id="location" class="location-select">
+            <option value="Location">Location</option>
+          </select>
+          <img
+            src="/assets/images/icons/search-dash.svg"
+            alt="search-dash-icon"
+          />
+          <img
+            src="/assets/images/poster/profile-dash.svg"
+            alt="profile-dash"
+          />
+        </div>
+
+        <!-- Hamburger Menu for Mobile -->
+        <div class="hamburger-menu" id="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu Overlay -->
+      <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+          <div class="navbar-brand">
+            <a href="/index.html">
+              <img
+                src="/assets/images/logo/tickets.svg"
+                alt="logo-tickitz-purple"
+              />
+            </a>
+          </div>
+          <button class="close-menu" id="close-menu">×</button>
+        </div>
+        <div class="mobile-menu-items">
+          <a href="/pages/admin/dashboard.html">Dashboard</a>
+          <a href="/pages/admin/movie-list.html">Movie</a>
+        </div>
+        <div class="mobile-auth">
+          <a href="./pages/auth/signin.html" class="btn btn-outline">Sign in</a>
+          <a href="./pages/auth/signup.html" class="btn btn-primary">Sign Up</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <!-- Header section -->
+      <header class="header">
+        <h1 class="title">List Movie</h1>
+        <div class="header-actions">
+          <div class="date-picker">
+            <img
+              class="date-picker-icon"
+              src="/assets/images/icons/calender2.svg"
+              alt="calendar icon"
+            />
+
+            <span class="date-picker-text">November 2023</span>
+
+            <img
+              class="date-picker-arrow"
+              src="/assets/images/icons/arrow.svg"
+              alt="arrow icon"
+            />
+          </div>
+          <a href="/pages/admin/add-movie.html">
+            <button class="add-button">Add Movies</button>
+          </a>
+        </div>
+      </header>
+
+      <!-- Movie table -->
+      <div class="table-container">
+        <table class="movie-table">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Thumbnail</th>
+              <th>Movie Name</th>
+              <th>Category</th>
+              <th>Released Date</th>
+              <th>Duration</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Row 1 -->
+            <tr>
+              <td class="number-cell">1</td>
+              <td class="thumbnail-cell">
+                <img
+                  src="/assets/images/poster/spiderman-list.png"
+                  alt="Spiderman HomeComing"
+                  class="thumbnail"
+                />
+              </td>
+              <td><span class="movie-name">Spiderman HomeComing</span></td>
+              <td>Action, Adventure</td>
+              <td>07/05/2023</td>
+              <td>2 Hours 15 Minute</td>
+              <td class="action-cell">
+                <div class="action-buttons">
+                  <img
+                    class="action-button view-button"
+                    src="/assets/images/icons/eyeget.svg"
+                    alt="look icon"
+                  />
+                  <img
+                    class="action-button edit-button"
+                    src="/assets/images/icons/edit.svg"
+                    alt="edit icon"
+                  />
+                  <img
+                    class="action-button delete-button"
+                    src="/assets/images/icons/delete.svg"
+                    alt="delete icon"
+                  />
+                </div>
+              </td>
+            </tr>
+            <!-- Row 2 -->
+            <tr>
+              <td class="number-cell">2</td>
+              <td class="thumbnail-cell">
+                <img
+                  src="/assets/images/poster/blackwidow-list.png"
+                  alt="Avengers End Game"
+                  class="thumbnail"
+                />
+              </td>
+              <td><span class="movie-name">Avengers End Game</span></td>
+              <td>Sci-fi, Adventure</td>
+              <td>10/06/2023</td>
+              <td>2 Hours 15 Minute</td>
+              <td class="action-cell">
+                <div class="action-buttons">
+                  <img
+                    class="action-button view-button"
+                    src="/assets/images/icons/eyeget.svg"
+                    alt="look icon"
+                  />
+                  <img
+                    class="action-button edit-button"
+                    src="/assets/images/icons/edit.svg"
+                    alt="edit icon"
+                  />
+                  <img
+                    class="action-button delete-button"
+                    src="/assets/images/icons/delete.svg"
+                    alt="delete icon"
+                  />
+                </div>
+              </td>
+            </tr>
+            <!-- Row 3 -->
+            <tr>
+              <td class="number-cell">3</td>
+              <td class="thumbnail-cell">
+                <img
+                  src="/assets/images/poster/spiderman-list.png"
+                  alt="Spiderman HomeComing"
+                  class="thumbnail"
+                />
+              </td>
+              <td><span class="movie-name">Spiderman HomeComing</span></td>
+              <td>Action, Adventure</td>
+              <td>02/03/2023</td>
+              <td>2 Hours 15 Minute</td>
+              <td class="action-cell">
+                <div class="action-buttons">
+                  <img
+                    class="action-button view-button"
+                    src="/assets/images/icons/eyeget.svg"
+                    alt="look icon"
+                  />
+                  <img
+                    class="action-button edit-button"
+                    src="/assets/images/icons/edit.svg"
+                    alt="edit icon"
+                  />
+                  <img
+                    class="action-button delete-button"
+                    src="/assets/images/icons/delete.svg"
+                    alt="delete icon"
+                  />
+                </div>
+              </td>
+            </tr>
+            <!-- Row 4 -->
+            <tr>
+              <td class="number-cell">4</td>
+              <td class="thumbnail-cell">
+                <img
+                  src="/assets/images/poster/blackwidow-list.png"
+                  alt="Avengers End Game"
+                  class="thumbnail"
+                />
+              </td>
+              <td><span class="movie-name">Avengers End Game</span></td>
+              <td>Sci-fi, Adventure</td>
+              <td>01/09/2023</td>
+              <td>2 Hours 15 Minute</td>
+              <td class="action-cell">
+                <div class="action-buttons">
+                  <img
+                    class="action-button view-button"
+                    src="/assets/images/icons/eyeget.svg"
+                    alt="look icon"
+                  />
+                  <img
+                    class="action-button edit-button"
+                    src="/assets/images/icons/edit.svg"
+                    alt="edit icon"
+                  />
+                  <img
+                    class="action-button delete-button"
+                    src="/assets/images/icons/delete.svg"
+                    alt="delete icon"
+                  />
+                </div>
+              </td>
+            </tr>
+            <!-- Row 5 -->
+            <tr>
+              <td class="number-cell">5</td>
+              <td class="thumbnail-cell">
+                <img
+                  src="/assets/images/poster/spiderman-list.png"
+                  alt="Spiderman HomeComing"
+                  class="thumbnail"
+                />
+              </td>
+              <td><span class="movie-name">Spiderman HomeComing</span></td>
+              <td>Action, Adventure</td>
+              <td>07/08/2023</td>
+              <td>2 Hours 15 Minute</td>
+              <td class="action-cell">
+                <div class="action-buttons">
+                  <img
+                    class="action-button view-button"
+                    src="/assets/images/icons/eyeget.svg"
+                    alt="look icon"
+                  />
+                  <img
+                    class="action-button edit-button"
+                    src="/assets/images/icons/edit.svg"
+                    alt="edit icon"
+                  />
+                  <img
+                    class="action-button delete-button"
+                    src="/assets/images/icons/delete.svg"
+                    alt="delete icon"
+                  />
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination">
+        <div class="page-item active">1</div>
+        <div class="page-item">2</div>
+        <div class="page-item">3</div>
+        <div class="page-item">4</div>
+      </div>
+    </div>
+
+    <main>
+      <!--  footer -->
+      <footer>
+        <div class="footer-container">
+          <section class="footer-section">
+            <div class="logo">
+              <img src="/assets/images/logo/tickets.svg" alt="tickitz footer" />
+            </div>
+            <p class="tagline">
+              Stop waiting in line. Buy tickets conveniently, watch movies
+              quietly.
+            </p>
+          </section>
+
+          <section class="footer-section">
+            <h3>Explore</h3>
+            <nav class="nav-links">
+              <a href="#">Cinemas</a>
+              <a href="#">Movies List</a>
+              <a href="#">My Ticket</a>
+              <a href="#">Notification</a>
+            </nav>
+          </section>
+
+          <section class="footer-section">
+            <h3>Our Sponsor</h3>
+            <div class="sponsors">
+              <div class="sponsor-logo">
+                <img src="/assets/images/icons/edu.svg" alt="ebu-id" />
+              </div>
+              <div class="sponsor-logo">
+                <img src="/assets/images/icons/cineone.svg" alt="cineone" />
+              </div>
+              <div class="sponsor-logo">
+                <img src="/assets/images/icons/hiflix.svg" alt="hiflix" />
+              </div>
+            </div>
+          </section>
+
+          <section class="footer-section">
+            <h3>Follow us</h3>
+            <div class="social-links">
+              <a href="#" class="social-link">
+                <img src="/assets/images/icons/facebook.svg" alt="facebook" />
+                Tickitz Cinema id
+              </a>
+              <a href="#" class="social-link">
+                <img src="/assets/images/icons/instagram.svg" alt="instagram" />
+                tickitz.id
+              </a>
+              <a href="#" class="social-link">
+                <img src="/assets/images/icons/twitter.svg" alt="twitter" />
+                tickitz.id
+              </a>
+              <a href="#" class="social-link">
+                <img src="/assets/images/icons/youtube.svg" alt="youtube" />
+                Tickitz Cinema id
+              </a>
+            </div>
+          </section>
+        </div>
+        <div class="copyright">© 2020 Tickitz. All Rights Reserved.</div>
+      </footer>
+    </main>
+  </body>
+</html>
