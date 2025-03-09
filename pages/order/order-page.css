@@ -169,6 +169,7 @@ body {
 .movie-details {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .movie-poster {
@@ -212,14 +213,18 @@ body {
   font-weight: 300;
 }
 
-.movie-metadata {
+.movie-meta-data {
   display: flex;
+  /* display: block; */
   flex-wrap: wrap;
   margin-bottom: 20px;
 }
 
 .metadata-item {
-  flex: 0 0 50%;
+  /* flex: 0 0 100%; */
+  flex: 0 0 34%;
+
+  /* flex-wrap: wrap; */
   margin-bottom: 20px;
 }
 
@@ -238,6 +243,8 @@ body {
 .synopsis {
   margin: 0 20px 30px;
   max-width: 715px;
+  position: relative;
+  bottom: 50px;
 }
 
 .synopsis h2 {
@@ -685,7 +692,7 @@ footer {
 @media screen and (max-width: 480px) {
   /* Movie Details */
   .movie-poster {
-    bottom: 30px;
+    bottom: 110px;
   }
 
   .movie-title {
