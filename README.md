@@ -7,7 +7,7 @@
   ![CSS](https://img.shields.io/badge/CSS-49.8%25-blue)
   ![JavaScript](https://img.shields.io/badge/JavaScript-6.6%25-yellow)
   
-  <a href="https://mhakimsaputra17.github.io/weekly-task3/">View Demo</a> ·
+  <a href="https://tickitz.mhakimsaputra.me">View Demo</a> ·
   <a href="https://github.com/mhakimsaputra17/weekly-task3/issues">Report Bug</a> ·
   <a href="https://github.com/mhakimsaputra17/weekly-task3/issues">Request Feature</a>
 </div>
