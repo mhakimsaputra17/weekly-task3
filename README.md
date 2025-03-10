@@ -1,7 +1,7 @@
 # Weekly Task 3
 
 ## Project Overview
-This is my submission for Weekly Task 3, a web development project implementing interactive web pages using HTML, CSS, and JavaScript.
+This is my submission for Weekly Task 3 and 4, a web development project implementing interactive web pages using HTML, CSS, and JavaScript.
 
 ## Technologies Used
 - HTML (43.6%)
@@ -16,16 +16,16 @@ This is my submission for Weekly Task 3, a web development project implementing 
 ## Documentation
 
 ### Project Preview
-![Project Screenshot](screenshot.png)
+
+
 <!-- You can replace screenshot.png with an actual screenshot of your project -->
 
 ### Author Documentation
-![My Photo](my-photo.jpg)
+![week4-photo-documentation](https://github.com/user-attachments/assets/39613ad7-7426-419c-9759-70c4335ad657)
 <!-- Replace my-photo.jpg with your actual photo filename -->
 
 **Name:** M. Hakim Saputra  
-**Student ID:** [Your ID]  
-**Class:** [Your Class]
+
 
 ### Progress
 This week I have completed:
